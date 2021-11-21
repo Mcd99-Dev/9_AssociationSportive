@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Liste des gymnases</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Identifiant</th>
+            <th>Nom du gymnase</th>
+            <th>Ville</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let gymnase of gymnases | async">
+            <td>{{gymnase.idGymnase}}</td>
+            <td>{{gymnase.nomGymnase}}</td>
+            <td>{{gymnase.ville}}</td>
+            <td><button (click)="gymnaseDetails(gymnase.id)" class="btn btn-primary" style="margin-left: 10px">Details</button></td>
+            <td><button (click)="deleteGymnase(gymnase.id)" class="btn btn-danger">Supprimer</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

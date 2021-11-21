@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Liste des sportifs</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Identifiant</th>
+            <th>Prénom du sportif</th>
+            <th>Nom du sportif</th>
+            <th>Sexe du sportif</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sportif of sportifs | async">
+            <td>{{sportif.idSportif}}</td>
+            <td>{{sportif.prenom}}</td>
+            <td>{{sportif.nom}}</td>
+            <td>{{sportif.sexe}}</td>
+            <td> <button (click)="sportifDetails(sportif.id)" class="btn btn-primary" style="margin-left: 10px">Details</button></td>
+            <td><button (click)="deleteSportif(sportif.id)" class="btn btn-danger">Supprimer</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

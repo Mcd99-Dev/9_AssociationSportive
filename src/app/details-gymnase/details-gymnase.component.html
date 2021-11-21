@@ -1,0 +1,30 @@
+<h2>Details</h2> 
+
+<hr/>
+<div *ngIf="gymnase">
+  <div>
+    <label>Identifiant Gymnase : </label> {{gymnase.idGymnase}}
+  </div>
+  <div>
+    <label><b>Nom du gymnase : </b></label> {{gymnase.nomGymnase}}
+  </div>
+  <div>
+    <label><b>Adresse : </b></label> {{gymnase.adresse}}
+  </div> 
+  <div>
+    <label><b>Ville : </b></label> {{gymnase.ville}}
+  </div>  
+  <div>
+    <label><b>Surface : </b></label> {{gymnase.surface}}
+  </div>  
+  <div>
+    <label><b>Seances : </b></label> {{gymnase.surface}}
+ </div>  
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Liste des gymnases</button><br>
+
+
